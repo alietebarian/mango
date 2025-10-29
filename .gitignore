@@ -1,0 +1,23 @@
+# پوشه‌های تنظیمات Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# فایل‌های خروجی
+bin/
+obj/
+
+# فایل‌های لاگ
+*.log
+
+# فایل‌های npm (اگر فرانت‌اند داری)
+node_modules/
+
+# فایل‌های محیط توسعه
+.env
+
+# پوشه های سیستم عامل
+.DS_Store
+Thumbs.db
