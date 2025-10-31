@@ -21,6 +21,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.Configure<IdentityOptions>(opt =>
+{
+    opt.Password.RequireDigit = false;
+    opt.Password.RequiredLength = 1;
+    opt.Password.RequireLowercase = false;
+    opt.Password.RequireUppercase = false;
+    opt.Password.RequireNonAlphanumeric = false;
+});
+
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
