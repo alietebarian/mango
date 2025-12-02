@@ -110,11 +110,12 @@ public class AuthController : ControllerBase
         var response = new LoginResonseDto
         {
             Email = userFromDb.Email,
-            Token = tokenHandler.WriteToken(token)
+            Token = tokenHandler.WriteToken(token),
+            UserRole = role
         };
 
         return Ok(response);
     }
-
+ 
 
 }
